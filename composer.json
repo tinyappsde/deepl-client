@@ -1,0 +1,32 @@
+{
+	"name": "tinyapps/deepl-client",
+	"description": "Simple PHP client for the DeepL translation API.",
+	"type": "library",
+	"keywords": [
+		"deepl",
+		"translation",
+		"translator"
+	],
+	"require": {
+		"php": "^7.4.0 || ^8.0",
+		"guzzlehttp/guzzle": "^7.3"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^9.5"
+	},
+	"autoload": {
+		"psr-4": {
+			"TinyApps\\DeepL\\": "src"
+		}
+	},
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Dion Purushotham",
+			"email": "hello@tinyapps.de"
+		}
+	],
+	"scripts": {
+		"test": "vendor/bin/phpunit tests --bootstrap vendor/autoload.php"
+	}
+}
