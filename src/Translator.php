@@ -17,13 +17,14 @@ class Translator {
 	/**
 	 * Initialize DeepL client
 	 *
+         * @param string $customUri
 	 * @param string $authKey
 	 */
-	public function __construct(string $authKey) {
+	public function __construct(string $authKey, string $customUri = null) {
 		$this->authKey = $authKey;
 
 		$this->client = new Client([
-			'base_uri' => self::BASE_URI,
+			'base_uri' => is_null($customUri) ? self::BASE_URI : $customUri,
 			'headers' => [
 				'Accept' => 'application/json',
 				'Content-Type' => 'application/json',
